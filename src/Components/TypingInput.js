@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const TypingInput = () => {
     const [countdown, setCountdown] = useState(15);
@@ -10,6 +10,24 @@ const TypingInput = () => {
 
     let para =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+    useEffect(() => {
+        if (countdown > 0) {
+            const timer = setInterval(() => {
+                setCountdown(countdown - 1);
+            }, 1000);
+
+            // Clear the interval when the component unmounts or when countdown reaches 0.
+            // If countdown changes or the component re-renders, it clears (stops) the timer to avoid issues.
+            // it is used to clean the previous running timer. i.e. every time a timer starts so it stops the previous timer for smooth functioning
+
+            // After setting up the timer, there's a return statement within the useEffect.
+            // This is a cleanup function. It's used to clear (stop) the timer when the component re-renders or
+            // when the countdown variable changes.clearInterval(timer) is called,
+            // where timer is the reference to the interval previously created.
+            return () => clearInterval(timer);
+        }
+    }, [countdown]);
 
     return (
         <div className="typingInput">
