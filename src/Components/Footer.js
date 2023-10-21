@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="social">
                 <a href="/" className="github">
                     <svg
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                         focusable="false"
                         aria-hidden="true"
                         viewBox="0 0 24 24"
@@ -17,7 +17,7 @@ const Footer = () => {
 
                 <a href="/" className="LinkedIn">
                     <svg
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                         focusable="false"
                         aria-hidden="true"
                         viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ const Footer = () => {
 
                 <a href="/" className="mail">
                     <svg
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                         focusable="false"
                         aria-hidden="true"
                         viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ const Footer = () => {
 
                 <a href="/" className="Instagram">
                     <svg
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                         focusable="false"
                         aria-hidden="true"
                         viewBox="0 0 24 24"

@@ -6,7 +6,7 @@ const Header = () => {
             <div className="left">
                 <h1>TypeCat</h1>
                 <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                     focusable="false"
                     aria-hidden="true"
                     viewBox="0 0 24 24"
@@ -16,7 +16,7 @@ const Header = () => {
             </div>
             <div className="right">
                 <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                     focusable="false"
                     aria-hidden="true"
                     viewBox="0 0 24 24"

@@ -1,37 +1,39 @@
 import React, { useState } from "react";
 
 const TypingInput = () => {
-    const [timer, setTimer] = useState(15);
+    const [countdown, setCountdown] = useState(15);
+    const [testStart, setTestStart] = useState(false);
+    const [testEnd, setTestEnd] = useState(false);
 
     let keyChar = 0;
-    let keyWord = 0;
+    // let keyWord = 0;
 
     let para =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
-    let startTimer;
 
     return (
         <div className="typingInput">
             <div className="row-1">
                 <div>
-                    <p>{timer}</p>
+                    <p>{countdown}</p>
                 </div>
                 <div className="buttons">
-                    <button onClick={() => setTimer(15)}>15s</button>
-                    <button onClick={() => setTimer(30)}>30s</button>
-                    <button onClick={() => setTimer(60)}>60s</button>
+                    <button onClick={() => setCountdown(15)}>15s</button>
+                    <button onClick={() => setCountdown(30)}>30s</button>
+                    <button onClick={() => setCountdown(60)}>60s</button>
                 </div>
             </div>
 
             <div className="text-box">
-                {/* {para.split("").map((char) => {
+                {para.split("").map((char) => {
                     return <span key={"char" + keyChar++}>{char}</span>;
-                })} */}
+                })}
 
-                {para.split(" ").map((word) => {
+                {/* {para.split(" ").map((word) => {
                     return (
-                        <span className="word" key={"word" + keyWord++}>
+                        <span
+                            className="word"
+                            key={"word" + keyWord++}>
                             {word.split("").map((char) => {
                                 return (
                                     <span
@@ -43,7 +45,7 @@ const TypingInput = () => {
                             })}
                         </span>
                     );
-                })}
+                })} */}
             </div>
 
             <div className="row-2">
