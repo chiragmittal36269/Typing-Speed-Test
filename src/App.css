@@ -1,0 +1,41 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.app {
+    margin-top: 100px;
+    width: 80vw;
+    margin-inline: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-1 .buttons {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* gap: 2px; */
+}
+
+.row-1 .buttons button {
+    border: none;
+}
