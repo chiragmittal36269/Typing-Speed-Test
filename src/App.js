@@ -11,8 +11,6 @@ import Signup from "./Components/User/Signup";
 const App = () => {
     let user = localStorage.getItem("user");
 
-    console.log(user);
-
     return (
         <div className="app">
             <Header />
