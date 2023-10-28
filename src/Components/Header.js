@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="header">
             <div className="left">
-                <h1>TypeCat</h1>
+                <h1 onClick={() => navigate("/typing-speed-test")}>TypeCat</h1>
                 <svg
                     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                     focusable="false"

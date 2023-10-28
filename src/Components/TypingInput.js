@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const TypingInput = () => {
+    const navigate = useNavigate();
+
     const [countdown, setCountdown] = useState(15);
     const [testStart, setTestStart] = useState(false);
     const [testEnd, setTestEnd] = useState(false);
@@ -28,6 +31,13 @@ const TypingInput = () => {
                 timer = setInterval(() => {
                     setCountdown(countdown - 1);
                 }, 1000);
+            } else if (countdown === 0) {
+                setTestEnd(true);
+                setTestStart(false);
+                navigate("/statics");
+            } else {
+                setTestEnd(true);
+                setTestStart(false);
             }
         }
 
@@ -37,12 +47,12 @@ const TypingInput = () => {
         // we did the below statement because our page is rendering again and again so our timer will run again and again and make new timer every time.
         // so clear the previous timer we use this return statement
         return () => clearInterval(timer);
-    }, [countdown, testStart]);
+    }, [countdown, testStart, navigate]);
 
     // useEffect(() => {
     //     let timer;
     //     if (countdown > 8) {
-    //         timer = setInterval(() => {
+    //         timer = setInterval(() => {j
     //             console.log("hello");
     //             setCountdown(countdown - 1);
     //         }, 1000);
