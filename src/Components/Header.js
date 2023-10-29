@@ -3,11 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const user = localStorage.getItem("user");
+    let loggedIn = localStorage.getItem("loggedIn");
     let page = "";
-    if (user == null) {
+    if (user === null && loggedIn === null) {
         page = "/signup";
-    } else {
+    } else if (user !== null && loggedIn === null) {
         page = "/login";
+    } else {
+        page = "/user";
     }
 
     const navigate = useNavigate();
